@@ -13,7 +13,7 @@ public class BankManagerLoginTest extends testBase {
 
 		log.debug("Inside Login Test.");
 		driver.findElement(By.cssSelector(objectRepo.getProperty("bmlBtn"))).click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		log.debug("Login Executed.");
 		driver.findElement(By.cssSelector(objectRepo.getProperty("addcusBtn"))).isDisplayed();
 		Assert.assertTrue(driver.findElement(By.cssSelector(objectRepo.getProperty("addcusBtn"))).isDisplayed());
