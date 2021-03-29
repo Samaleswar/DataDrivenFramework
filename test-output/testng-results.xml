@@ -1,25 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Data Driven" duration-ms="5208" started-at="2021-03-28T19:59:03 IST" finished-at="2021-03-28T19:59:08 IST">
+  <suite name="Data Driven" duration-ms="6220" started-at="2021-03-29T16:03:19 IST" finished-at="2021-03-29T16:03:25 IST">
     <groups>
     </groups>
-    <test name="Login Test" duration-ms="5208" started-at="2021-03-28T19:59:03 IST" finished-at="2021-03-28T19:59:08 IST">
-      <class name="testCases.LoginTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.LoginTest@2bbf4b8b]" name="setUp" is-config="true" duration-ms="4813" started-at="2021-03-28T19:58:58 IST" finished-at="2021-03-28T19:59:03 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="LoginAsBankManager()[pri:0, instance:testCases.LoginTest@2bbf4b8b]" name="LoginAsBankManager" duration-ms="5148" started-at="2021-03-28T19:59:03 IST" finished-at="2021-03-28T19:59:08 IST">
+    <test name="Bank Manager Login Test" duration-ms="5344" started-at="2021-03-29T16:03:19 IST" finished-at="2021-03-29T16:03:24 IST">
+      <class name="testCases.BankManagerLoginTest">
+        <test-method status="PASS" signature="LoginAsBankManager()[pri:0, instance:testCases.BankManagerLoginTest@2a266d09]" name="LoginAsBankManager" duration-ms="5289" started-at="2021-03-29T16:03:19 IST" finished-at="2021-03-29T16:03:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginAsBankManager -->
-        <test-method status="PASS" signature="tesrDown()[pri:0, instance:testCases.LoginTest@2bbf4b8b]" name="tesrDown" is-config="true" duration-ms="755" started-at="2021-03-28T19:59:08 IST" finished-at="2021-03-28T19:59:09 IST">
+      </class> <!-- testCases.BankManagerLoginTest -->
+    </test> <!-- Bank Manager Login Test -->
+    <test name="Add Customer Test" duration-ms="849" started-at="2021-03-29T16:03:24 IST" finished-at="2021-03-29T16:03:25 IST">
+      <class name="testCases.AddCustomerTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.AddCustomerTest@776b83cc]" name="setUp" is-config="true" duration-ms="4775" started-at="2021-03-29T16:03:14 IST" finished-at="2021-03-29T16:03:19 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tesrDown -->
-      </class> <!-- testCases.LoginTest -->
-    </test> <!-- Login Test -->
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="addCustomer(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.AddCustomerTest@776b83cc]" name="addCustomer" duration-ms="825" started-at="2021-03-29T16:03:24 IST" data-provider="getData" finished-at="2021-03-29T16:03:25 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Raam]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[mishra]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[a234wd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCustomer -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.AddCustomerTest@776b83cc]" name="tearDown" is-config="true" duration-ms="848" started-at="2021-03-29T16:03:25 IST" finished-at="2021-03-29T16:03:26 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.AddCustomerTest -->
+    </test> <!-- Add Customer Test -->
   </suite> <!-- Data Driven -->
 </testng-results>
