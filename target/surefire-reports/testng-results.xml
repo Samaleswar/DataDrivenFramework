@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Data Driven" duration-ms="1757" started-at="2021-03-31T11:40:10Z" finished-at="2021-03-31T11:40:12Z">
+  <suite name="Data Driven" duration-ms="1677" started-at="2021-03-31T15:37:47Z" finished-at="2021-03-31T15:37:49Z">
     <groups>
     </groups>
-    <test name="Bank Manager Login Test" duration-ms="246" started-at="2021-03-31T11:40:10Z" finished-at="2021-03-31T11:40:10Z">
+    <test name="Bank Manager Login Test" duration-ms="468" started-at="2021-03-31T15:37:47Z" finished-at="2021-03-31T15:37:48Z">
       <class name="testCases.BankManagerLoginTest">
-        <test-method status="PASS" signature="LoginAsBankManager()[pri:0, instance:testCases.BankManagerLoginTest@72d6b3ba]" name="LoginAsBankManager" duration-ms="219" started-at="2021-03-31T17:10:10Z" finished-at="2021-03-31T17:10:10Z">
+        <test-method status="PASS" signature="bankName()[pri:0, instance:testCases.BankManagerLoginTest@72d6b3ba]" name="bankName" duration-ms="104" started-at="2021-03-31T21:07:47Z" finished-at="2021-03-31T21:07:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginAsBankManager -->
+        </test-method> <!-- bankName -->
+        <test-method status="PASS" signature="loginAsBankManager()[pri:0, instance:testCases.BankManagerLoginTest@72d6b3ba]" name="loginAsBankManager" duration-ms="334" started-at="2021-03-31T21:07:47Z" finished-at="2021-03-31T21:07:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsBankManager -->
       </class> <!-- testCases.BankManagerLoginTest -->
     </test> <!-- Bank Manager Login Test -->
-    <test name="Add Customer Test" duration-ms="831" started-at="2021-03-31T11:40:11Z" finished-at="2021-03-31T11:40:12Z">
+    <test name="Add Customer Test" duration-ms="757" started-at="2021-03-31T15:37:48Z" finished-at="2021-03-31T15:37:49Z">
       <class name="testCases.AddCustomerTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.AddCustomerTest@dc9876b]" name="setUp" is-config="true" duration-ms="4282" started-at="2021-03-31T17:10:06Z" finished-at="2021-03-31T17:10:10Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.AddCustomerTest@dc9876b]" name="setUp" is-config="true" duration-ms="3757" started-at="2021-03-31T21:07:43Z" finished-at="2021-03-31T21:07:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.AddCustomerTest@dc9876b]" name="addCustomerTest" duration-ms="802" started-at="2021-03-31T17:10:11Z" data-provider="getData" finished-at="2021-03-31T17:10:12Z">
+        <test-method status="PASS" signature="addCustomerTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.AddCustomerTest@dc9876b]" name="addCustomerTest" duration-ms="731" started-at="2021-03-31T21:07:48Z" data-provider="getData" finished-at="2021-03-31T21:07:49Z">
           <params>
             <param index="0">
               <value>
@@ -40,7 +44,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.AddCustomerTest@dc9876b]" name="tearDown" is-config="true" duration-ms="838" started-at="2021-03-31T17:10:12Z" finished-at="2021-03-31T17:10:13Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.AddCustomerTest@dc9876b]" name="tearDown" is-config="true" duration-ms="754" started-at="2021-03-31T21:07:49Z" finished-at="2021-03-31T21:07:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

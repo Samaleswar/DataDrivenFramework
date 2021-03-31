@@ -11,15 +11,20 @@ import base.testBase;
 public class BankManagerLoginTest extends testBase {
 
 	@Test
-	public void LoginAsBankManager() throws InterruptedException, IOException {
-		
+	public void loginAsBankManager() throws InterruptedException, IOException {
 		log.debug("Inside Login Test.");
 		click("bmlBtn_CSS");
 		log.debug("Login Executed.");
-		
-		driver.findElement(By.cssSelector(objectRepo.getProperty("addcusBtn_CSS"))).isDisplayed();
-		Assert.assertTrue(driver.findElement(By.cssSelector(objectRepo.getProperty("addcusBtn"))).isDisplayed());
-		
-		
+
+		Assert.assertTrue(driver.findElement(By.cssSelector(objectRepo.getProperty("addcusBtn_CSS"))).isDisplayed());
+
+	}
+
+	@Test
+	public void bankName() {
+		String bankname = driver.findElement(By.cssSelector(objectRepo.getProperty("bankName_CSS"))).getText();
+
+		Assert.assertEquals(bankname, objectRepo.getProperty("actualBankName"));
+		log.info("Bank Name Verified.");
 	}
 }

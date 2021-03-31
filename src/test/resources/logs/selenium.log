@@ -1,6 +1,0 @@
-16:41:44,598 DEBUG devpinoyLogger:38 - Config file loaded.
-16:41:46,772 DEBUG devpinoyLogger:48 - Chrome Lunched.
-16:41:48,541 DEBUG devpinoyLogger:60 - Nevigated to the TestUrl :http://www.way2automation.com/angularjs-protractor/banking/#/login
-16:41:48,787 DEBUG devpinoyLogger:16 - Inside Login Test.
-16:41:48,955 DEBUG devpinoyLogger:19 - Login Executed.
-16:41:51,675 DEBUG devpinoyLogger:77 - Test Completed and Browser is Closed.
