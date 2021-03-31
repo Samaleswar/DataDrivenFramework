@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Data Driven]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="listeners.CustomListeners"/>
+  </listeners>
   <test name="Bank Manager Login Test(failed)">
     <classes>
       <class name="testCases.BankManagerLoginTest">
@@ -12,15 +17,4 @@
       </class> <!-- testCases.BankManagerLoginTest -->
     </classes>
   </test> <!-- Bank Manager Login Test(failed) -->
-  <test name="Add Customer Test(failed)">
-    <classes>
-      <class name="testCases.AddCustomerTest">
-        <methods>
-          <include name="addCustomer"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- testCases.AddCustomerTest -->
-    </classes>
-  </test> <!-- Add Customer Test(failed) -->
 </suite> <!-- Failed suite [Data Driven] -->
