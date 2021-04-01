@@ -20,5 +20,10 @@
 			<class name="testCases.AddCustomerTest" />
 		</classes>
 	</test> <!-- Test -->
+<test name="Open Account Test">
+		<classes>
+			<class name="testCases.OpenAccountTest" />
+		</classes>
+	</test> <!-- Test -->
 
 </suite> <!-- Suite -->

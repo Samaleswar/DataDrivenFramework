@@ -32,7 +32,7 @@ public class TestUtils extends testBase{
 	}
 
 	
-	@DataProvider
+	@DataProvider(name="dp")
 	public Object[][] getData(Method m) {
 
 		String sheetName = m.getName();

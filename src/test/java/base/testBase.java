@@ -8,8 +8,10 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -32,7 +34,7 @@ public class testBase {
 			System.getProperty("user.dir") + "/src/test/resources/excel/testdata.xlsx");
 	public static WebDriverWait wait;
 	public static ExtentTest test;
-	
+
 	@BeforeSuite
 	public void setUp() throws IOException {
 
@@ -68,7 +70,7 @@ public class testBase {
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.wait")),
 					TimeUnit.SECONDS);
-			wait=new WebDriverWait(driver,5);
+			wait = new WebDriverWait(driver, 5);
 
 		}
 
@@ -83,8 +85,7 @@ public class testBase {
 		log.debug("Test Completed and Browser is Closed.");
 
 	}
-	
-	
+
 	public void click(String locator) {
 
 		if (locator.endsWith("_CSS")) {
@@ -94,10 +95,10 @@ public class testBase {
 		} else if (locator.endsWith("_ID")) {
 			driver.findElement(By.id(objectRepo.getProperty(locator))).click();
 		}
-		CustomListeners.extentTest.get().log(Status.INFO, "Clicking on :"+locator);
-}
-	
-	public void type(String locator,String value) {
+		CustomListeners.extentTest.get().log(Status.INFO, "Clicking on :" + locator);
+	}
+
+	public void type(String locator, String value) {
 		if (locator.endsWith("_CSS")) {
 			driver.findElement(By.cssSelector(objectRepo.getProperty(locator))).sendKeys(value);
 		} else if (locator.endsWith("_XPATH")) {
@@ -105,12 +106,24 @@ public class testBase {
 		} else if (locator.endsWith("_ID")) {
 			driver.findElement(By.id(objectRepo.getProperty(locator))).sendKeys(value);
 		}
-		CustomListeners.extentTest.get().log(Status.INFO, "Sending Keys To :"+locator+" WithValue :"+value);
+		CustomListeners.extentTest.get().log(Status.INFO, "Sending Keys To :" + locator + " WithValue :" + value);
 
 	}
-	
-	
-	
-	
-	
+
+	WebElement dropdown;
+
+	public void selectFromDropdown(String locator, String value) {
+		if (locator.endsWith("_CSS")) {
+			dropdown = driver.findElement(By.cssSelector(objectRepo.getProperty(locator)));
+		} else if (locator.endsWith("_XPATH")) {
+			dropdown = driver.findElement(By.xpath(objectRepo.getProperty(locator)));
+		} else if (locator.endsWith("_ID")) {
+			dropdown = driver.findElement(By.id(objectRepo.getProperty(locator)));
+		}
+		Select dropdownselect = new Select(dropdown);
+		dropdownselect.selectByVisibleText(value);
+		CustomListeners.extentTest.get().log(Status.INFO, "Selecting From DropDown :" + locator + " WithValue :" + value);
+
+	}
+
 }
